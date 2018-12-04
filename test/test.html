@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+</head>
+
+<body>
+    <canvas id="c"></canvas>
+    <svg id="s"></svg>
+
+    <script src="../dist/simple-line-chart.min.js"></script>
+    <script>
+        const options = {
+            labels: [1, 2, 3, 4, 5, 6, 7],
+            data: [
+                {
+                    lineColor: "#f00",
+                    lineWidth: 2,
+                    lineOpacity: 0.5,
+                    lineDash: [0],
+                    data: [2, 3, 5, 7, 4, 2, 6].map(p => ({ value: p }))
+                }
+            ]
+        };
+
+        new Chart("#s", options);
+        new Chart('#c', options);
+    </script>
+</body>
+
+</html>
